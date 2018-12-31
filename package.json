@@ -1,8 +1,8 @@
 {
   "name": "backlogathon-nodecg",
   "version": "0.0.0",
-  "description": "Dynamic broadcast graphics rendered in a browser",
-  "homepage": "http://nodecg.com/",
+  "description": "Stream layouts for https://twitch.tv/backlogathon/ home streams.",
+  "homepage": "https://twitch.tv/backlogathon/",
   "author": {
     "name": "Ryan Markel",
     "email": "ryan@26mag.com",
@@ -21,20 +21,20 @@
     "compatibleRange": "~1",
     "dashboardPanels": [
       {
-        "name": "panel",
-        "title": "Panel",
+        "name": "motd" ,
+        "title": "Message of the Day",
         "width": 2,
-        "file": "panel.html",
+        "file": "motd.html",
         "headerColor": "#9f9bbd"
       }
     ],
     "graphics": [
       {
         "file": "index.html",
-        "width": 1280,
-        "height": 720
+        "width": 1920,
+        "height": 1080
       }
     ]
   },
-  "repository": "https://github.com/nodecg/nodecg.git"
+  "repository": "https://github.com/backlogathon/backlogathon-nodecg.git"
 }

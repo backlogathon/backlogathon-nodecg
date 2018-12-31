@@ -3,7 +3,22 @@
 <head>
     <meta charset="UTF-8">
 </head>
+    <style>
+        #message {
+            font-size: 28px;
+            font-family: "Helvetica Neue";
+            font-weight: bold;
+        }
+    </style>
 <body>
-
+    <div id="message"></div>
 </body>
+
+<script>
+    const motdReplicant = nodecg.Replicant('motd');
+    
+    motdReplicant.on('change', (newValue, oldValue) => {
+            message.innerText = newValue;
+    });
+</script>
 </html>

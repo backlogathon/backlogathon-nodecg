@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <label>Enter MOTD:</label> 
+    <input id="motdInput" type="text"></input>
+    <button id="submitButton">Submit</button>
+</body>
+
+<script>
+    const motdInput = document.querySelector('#motdInput');
+    const submitButton = document.querySelector('#submitButton');
+    
+    const motdReplicant = nodecg.Replicant('motd');
+    
+    motdReplicant.on('change', (newValue, oldValue) => {
+        motdInput.value = newValue;
+    });
+    
+    submitButton.onclick = () => {
+        motdReplicant.value = motdInput.value;
+    };
+</script>
+</html>
